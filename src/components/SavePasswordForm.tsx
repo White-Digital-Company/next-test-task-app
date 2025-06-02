@@ -53,7 +53,7 @@ export default function SavePasswordForm() {
                 {...register('password')}
                 className="mb-1"
             />
-            <p className="text-[#666666] text-[12px] mb-1">
+            <p className="text-[#666666] text-[12px] mb-4">
                 Your password is between 4 and 12 characters
             </p>
             {errors.password && (
