@@ -29,11 +29,13 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="grid grid-cols-4 gap-8 ">
-            <TaskColumn tasks={todoTasks} status="To do" />
-            <TaskColumn tasks={inProgress} status="In progress" />
-            <TaskColumn tasks={inReview} status="Review" />
-            <TaskColumn tasks={inCompleted} status="Completed" />
+        <div className="w-full overflow-x-auto">
+            <div className="grid auto-cols-[minmax(260px,_1fr)] grid-flow-col gap-8">
+                <TaskColumn tasks={todoTasks} status="To do" />
+                <TaskColumn tasks={inProgress} status="In progress" />
+                <TaskColumn tasks={inReview} status="Review" />
+                <TaskColumn tasks={inCompleted} status="Completed" />
+            </div>
         </div>
     );
 }
