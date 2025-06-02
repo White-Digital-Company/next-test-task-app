@@ -2,6 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { Task } from '@/types/task';
+import TaskColumn from '@/components/TaskColumn';
 
 async function fetchTasks(): Promise<Task[]> {
     const response = await fetch('https://683857ff2c55e01d184cee44.mockapi.io/api/v1/tasks');
@@ -15,6 +16,9 @@ export default function Dashboard() {
     });
 
     const todoTasks = data?.filter((task) => task.status === 'to-do');
+    const inProgress = data?.filter((task) => task.status === 'in-progress');
+    const inReview = data?.filter((task) => task.status === 'review');
+    const inCompleted = data?.filter((task) => task.status === 'completed');
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -25,15 +29,11 @@ export default function Dashboard() {
     }
 
     return (
-        <div>
-            {todoTasks?.map((task) => (
-                <div key={task.id}>
-                    <div>{task.createdAt}</div>
-                    <div>{task.title}</div>
-                    <div>{task.description}</div>
-                    <div>{task.status}</div>
-                </div>
-            ))}
+        <div className="grid grid-cols-4 gap-8 ">
+            <TaskColumn tasks={todoTasks} status="To do" />
+            <TaskColumn tasks={inProgress} status="In progress" />
+            <TaskColumn tasks={inReview} status="Review" />
+            <TaskColumn tasks={inCompleted} status="Completed" />
         </div>
     );
 }
