@@ -7,7 +7,7 @@ interface PageHeaderInterface {
 export default function PageHeader({ title }: PageHeaderInterface) {
     return (
         <div className="mb-7">
-            <h2 className="text-[20px] text-[#121212] mb-1 font-medium">{title}</h2>
+            <h2 className="text-[20px] text-textBlack mb-1 font-medium">{title}</h2>
             <DateDisplay />
         </div>
     );

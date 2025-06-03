@@ -18,7 +18,7 @@ export default async function DashboardPage() {
     const dehydratedState = dehydrate(queryClient);
 
     return (
-        <div className="py-10 px-8 bg-[#F7F9FD] flex-1 flex flex-col overflow-hidden">
+        <div className="py-10 px-8 bg-bgPage flex-1 flex flex-col overflow-hidden">
             <PageHeader title="My Tasks" />
             <div className="flex-1 min-h-0 overflow-x-auto">
                 <HydrationBoundary state={dehydratedState}>

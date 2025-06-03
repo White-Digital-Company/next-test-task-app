@@ -9,7 +9,7 @@ export default function DateDisplay() {
     return (
         <p className="text-[14px]">
             <span className="text-green-500">{weekday},</span>{' '}
-            <span className="text-[#AAAAAA]">{formattedDate}</span>
+            <span className="text-textLightGray">{formattedDate}</span>
         </p>
     );
 }

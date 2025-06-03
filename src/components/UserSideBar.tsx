@@ -5,8 +5,8 @@ export default function RightSidebar() {
     return (
         <div className="hidden md:flex w-full max-w-[280px] bg-white border-l border-gray-200 flex-col justify-between px-6 py-8">
             <div>
-                <h3 className="text-[16px] font-medium text-[#121212] mb-2">My Profile</h3>
-                <p className="text-[12px] text-[#64C882] mb-6">75% completed your profile</p>
+                <h3 className="text-[16px] font-medium text-textBlack mb-2">My Profile</h3>
+                <p className="text-[12px] text-primaryGreen mb-6">75% completed your profile</p>
 
                 <div className="flex flex-col items-center text-center">
                     <div className="relative w-[80px] h-[80px] mb-3">
@@ -17,12 +17,12 @@ export default function RightSidebar() {
                         </div>
                     </div>
 
-                    <p className="text-[14px] font-medium text-[#121212]">User R.</p>
-                    <p className="text-[12px] text-[#666666]">Developer at White Digital</p>
+                    <p className="text-[14px] font-medium text-textBlack">User R.</p>
+                    <p className="text-[12px] text-textGray">Developer at White Digital</p>
                 </div>
             </div>
             <div>
-                <button className="w-full bg-[#E15050] hover:bg-[#c63f3f] text-white text-[14px] font-medium py-2 rounded-sm">
+                <button className="w-full bg-bgRed hover:bg-bgHoverRed text-white text-[14px] font-medium py-2 rounded-sm">
                     Logout
                 </button>
             </div>

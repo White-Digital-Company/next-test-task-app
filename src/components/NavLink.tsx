@@ -18,7 +18,10 @@ export default function NavLink({ href, children, icon: Icon }: NavLinkInterface
     return (
         <Link
             href={href}
-            className={cn('text-[14px] flex gap-3', isActive ? 'text-[#64C882]' : 'text-[#AAAAAA]')}
+            className={cn(
+                'text-[14px] flex gap-3',
+                isActive ? 'text-primaryGreen' : 'text-textLightGray',
+            )}
         >
             <Icon className="w-5 h-5" />
             {children}

@@ -4,6 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-primaryGreen: #64C882;
+  --color-textBlack: #121212;
+  --color-textLightGray: #AAAAAA;
+  --color-textGray: #666666;
+  --color-bgRed: #D23D3D;
+  --color-bgHoverRed: #c63f3f;
+  --color-bgGray: #C4C4C4;
+  --color-bgPage: #F7F9FD;
+  --color-borderInput: #CCCCCC;
+  --color-logo: #FF9F24;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);

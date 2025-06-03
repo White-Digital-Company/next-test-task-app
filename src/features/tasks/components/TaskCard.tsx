@@ -27,16 +27,16 @@ export default function TaskCard({ title, description, createdAt }: TaskCard) {
     return (
         <Card className="pt-[18px] px-4 pb-6 h-54 justify-between hover:shadow-md">
             <CardHeader className="gap-6 p-0">
-                <CardTitle className="text-[16px] text-[#000000]">{title}</CardTitle>
-                <CardDescription className="text-[14px] text-[#12121299] line-clamp-2">
+                <CardTitle className="text-[16px] text-black">{title}</CardTitle>
+                <CardDescription className="text-[14px] text-textBlack opacity-60 line-clamp-2">
                     {description}
                 </CardDescription>
-                <CardAction className="text-[#AAAAAA] hover:text-[#121212]">
+                <CardAction className="text-textLightGray hover:text-textBlack">
                     <Ellipsis></Ellipsis>
                 </CardAction>
             </CardHeader>
             <CardFooter className="p-0 justify-between">
-                <div className="flex gap-1 items-center py-[6px] px-2 text-[#FFFFFF] text-[12px] bg-[#64C882] rounded-[4px]">
+                <div className="flex gap-1 items-center py-[6px] px-2 text-white text-[12px] bg-primaryGreen rounded-[4px]">
                     <Clock className="w-3 h-3" />
                     <span>{dateCreatedAt}</span>
                 </div>

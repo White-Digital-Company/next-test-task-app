@@ -37,13 +37,18 @@ export default function SavePasswordForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="">
-            <Label htmlFor="name" className="mb-2 text-[12px] text-[#666666]">
+            <Label htmlFor="name" className="mb-2 text-[12px] text-textGray">
                 User
             </Label>
-            <Input id="name" type="text" {...register('name')} className="mb-1 border-[#CCCCCC]" />
+            <Input
+                id="name"
+                type="text"
+                {...register('name')}
+                className="mb-1 border-borderInput"
+            />
             {errors.name && <p className="text-red-500 text-[12px] mb-2">{errors.name.message}</p>}
 
-            <Label htmlFor="password" className="mb-2 text-[12px] text-[#666666]">
+            <Label htmlFor="password" className="mb-2 text-[12px] text-textGray">
                 Password
             </Label>
             <Input
@@ -53,7 +58,7 @@ export default function SavePasswordForm() {
                 {...register('password')}
                 className="mb-1"
             />
-            <p className="text-[#666666] text-[12px] mb-4">
+            <p className="text-textGray text-[12px] mb-4">
                 Your password is between 4 and 12 characters
             </p>
             {errors.password && (
@@ -63,7 +68,7 @@ export default function SavePasswordForm() {
             <div className="flex justify-end">
                 <Button
                     type="submit"
-                    className="py-2 px-32 bg-[#64C882] rounded-sm hover:bg-[#34ad58]"
+                    className="py-2 px-32 bg-primaryGreen rounded-sm hover:bg-[#34ad58]"
                 >
                     Save
                 </Button>

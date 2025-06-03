@@ -11,7 +11,7 @@ export function AppSidebar() {
     return (
         <Sidebar className="w-[220px] bg-white">
             <SidebarHeader className="flex-row gap-3 ml-7 mt-14">
-                <div className="w-8 h-8 rounded-full bg-[#FF9F24] text-white font-bold flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-logo text-white font-bold flex items-center justify-center">
                     C
                 </div>
                 <h1 className="text-[20px] font-bold">TESTAPP</h1>
@@ -24,7 +24,7 @@ export function AppSidebar() {
             </SidebarContent>
 
             <SidebarFooter className="flex-row items-center gap-3 ml-[28px] mb-[38px] p-0">
-                <div className="w-8 h-8 rounded-full bg-[#C4C4C4]" />
+                <div className="w-8 h-8 rounded-full bg-bgGray" />
                 <div>
                     <div className="text-black font-semibold">User R.</div>
                     <div className="text-[10px]">test-mail@email.com</div>
