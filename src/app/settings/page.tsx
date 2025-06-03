@@ -1,6 +1,6 @@
 import PageHeader from '@/components/PageHeader';
-import SavePasswordForm from '@/components/SavePasswordForm';
-import UserSideBar from '@/components/UserSideBar';
+import SavePasswordForm from '@/features/user/components/SavePasswordForm';
+import UserSideBar from '@/features/user/components/UserSideBar';
 
 export default function SettingsPage() {
     return (

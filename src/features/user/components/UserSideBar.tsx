@@ -1,4 +1,4 @@
-import AvatarProgress from '@/components/AvatarProgress';
+import AvatarProgress from '@/features/user/components/AvatarProgress';
 import React from 'react';
 
 export default function RightSidebar() {
