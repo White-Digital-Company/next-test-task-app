@@ -1,7 +1,9 @@
 import type { Task } from '../types/task';
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL!;
+
 export async function getTasks(): Promise<Task[]> {
-    const res = await fetch('https://683857ff2c55e01d184cee44.mockapi.io/api/v1/tasks');
+    const res = await fetch(`${BASE_URL}/tasks`);
     if (!res.ok) {
         throw new Error('Failed to fetch tasks');
     }
