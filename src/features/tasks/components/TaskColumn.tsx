@@ -1,5 +1,5 @@
-import { Task } from '@/types/task';
-import TaskCard from '@/components/TaskCard';
+import { Task } from '@/features/tasks/types/task';
+import TaskCard from '@/features/tasks/components/TaskCard';
 
 interface TaskColumnInterface {
     status: string;
