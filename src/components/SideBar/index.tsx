@@ -3,7 +3,7 @@ import { DashboardIcon, SettingsIcon } from '@/assets';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { getNameWithSurnameInitial } from '@/lib/utils';
+import { getNameWithSurnameInitial } from '@/utils/getNameWithSurnameInitial';
 import { mockData } from '@/mocks/mockData';
 
 export default function Sidebar() {
@@ -24,7 +24,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="hidden md:flex w-64 bg-white dark:bg-gray-900 p-7 flex-col justify-between min-h-screen">
+    <aside className="hidden md:flex w-60 bg-white dark:bg-gray-900 p-7 flex-col justify-between min-h-screen">
       <div>
         <div className="flex items-center gap-3 mb-8">
           <div className="w-8 h-8 rounded-full bg-[#FF9F24] flex items-center justify-center text-white font-medium text-lg">
