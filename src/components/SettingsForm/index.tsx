@@ -68,7 +68,7 @@ export function SettingsForm() {
       <Button
         type="submit"
         disabled={isInvalid}
-        className={`w-full sm:w-auto md:self-end sm:px-[120px] py-2 rounded-[4px] text-white cursor-pointer transition
+        className={`w-full md:self-end md:max-w-[272px] py-2 rounded-[4px] transition
           ${isInvalid ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#64C882] hover:bg-[#57b774]'}`}
       >
         Save

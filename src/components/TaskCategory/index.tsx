@@ -13,7 +13,7 @@ export function TaskCategory({ title, tasks, maxTasks }: TaskCategoryProps) {
 
   return (
     <section>
-      <h2 className="font-medium text-base mb-2 text-[#121212]">
+      <h2 className="font-medium text-base mb-2">
         {title} ({tasks.length})
       </h2>
       {tasks.map((task) => (
