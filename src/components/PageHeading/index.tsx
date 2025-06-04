@@ -1,8 +1,8 @@
 import { getFormattedTodayDate } from '@/utils/getFormattedTodayDate';
 
-type PageHeadingProps = {
+interface PageHeadingProps {
   title: string;
-};
+}
 
 export function PageHeading({ title }: PageHeadingProps) {
   const { day, date } = getFormattedTodayDate();

@@ -2,11 +2,11 @@ import { Task } from '@/types/task';
 import { TaskCard } from '../TaskCard';
 import { EmptyTaskSlot } from '../EmptyTaskSlot';
 
-type TaskCategoryProps = {
+interface TaskCategoryProps {
   title: string;
   tasks: Task[];
   maxTasks: number;
-};
+}
 
 export function TaskCategory({ title, tasks, maxTasks }: TaskCategoryProps) {
   const emptyCount = Math.max(0, maxTasks - tasks.length);
