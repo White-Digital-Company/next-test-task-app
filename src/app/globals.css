@@ -4,8 +4,22 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-whitePrimary: #f7f9fd;
+  --color-blackPrimary: #121212;
+  --color-greenPrimary: #64c882;
+  --color-greenPrimaryHover: #57b774;
+  --color-grayLight: #aaaaaa;
+  --color-grayText: #666666;
+  --color-grayBorder: #cccccc;
+  --color-grayBorderLight: #f5f6fa;
+  --color-redPrimary: #d23d3d;
+  --color-redPrimaryHover: #9e4242;
+  --color-grayBackground: #c4c4c4;
+  --color-orangePrimary: #ff9f24;
+  --color-grayTextDark: #12121299;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-noto-sans: var(--font-noto-sans);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -76,8 +90,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --page-background: #f7f9fd;
-  --text-color: #121212;
 }
 
 .dark {
@@ -119,8 +131,8 @@
     @apply border-border outline-ring/50;
   }
   body {
-    background-color: var(--page-background);
+    background-color: var(--color-whitePrimary);
     font-family: var(--font-poppins);
-    color: var(--text-color);
+    color: var(--color-blackPrimary);
   }
 }

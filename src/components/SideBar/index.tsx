@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { getNameWithSurnameInitial } from '@/utils/getNameWithSurnameInitial';
 import { mockData } from '@/mocks/mockData';
+import clsx from 'clsx';
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -27,23 +28,25 @@ export default function Sidebar() {
     <aside className="hidden md:flex w-60 bg-white p-7 flex-col justify-between min-h-screen">
       <div>
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-8 h-8 rounded-full bg-[#FF9F24] flex items-center justify-center text-white font-medium text-lg">
+          <div className="w-8 h-8 rounded-full bg-orangePrimary flex items-center justify-center text-white font-medium text-lg">
             C
           </div>
           <h1 className="uppercase font-semibold text-xl">{projectName}</h1>
         </div>
         <nav className="flex flex-col gap-2">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
-            const colorClass = isActive
-              ? 'text-[#64C882]'
-              : 'text-[#AAAAAA] hover:text-[#64C882]';
-
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-2 py-2 rounded text-sm font-medium transition-colors ${colorClass}`}
+                className={clsx(
+                  'flex items-center gap-2 py-2 rounded text-sm font-medium transition-colors',
+                  {
+                    'text-greenPrimary': pathname === item.href,
+                    'text-grayLight hover:text-greenPrimary':
+                      pathname !== item.href,
+                  },
+                )}
               >
                 <item.icon />
                 {item.label}
@@ -56,13 +59,13 @@ export default function Sidebar() {
       <div className="flex items-center gap-3">
         <Avatar className="w-8 h-8">
           <AvatarImage src={user.avatarUrl} alt="User avatar" />
-          <AvatarFallback className="bg-[#C4C4C4]" />
+          <AvatarFallback className="bg-grayBackground" />
         </Avatar>
         <div className="text-xs">
           <div className="font-medium">
             {getNameWithSurnameInitial(user.fullName)}
           </div>
-          <div className="text-[#AAAAAA] font-normal text-[10px]">
+          <div className="text-grayLight font-normal text-[10px]">
             {user.email}
           </div>
         </div>

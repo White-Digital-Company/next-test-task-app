@@ -38,7 +38,6 @@ export function SettingsForm() {
           id="name"
           placeholder="Enter your full name"
           {...register('name')}
-          className="text-sm sm:text-base border border-[#CCCCCC] bg-white text-black rounded-[8px] placeholder:text-[#666666] font-normal p-3 sm:p-4"
           aria-invalid={!!errors.name}
         />
         {errors.name && <InputError text={errors.name.message} />}
@@ -51,13 +50,12 @@ export function SettingsForm() {
           type="password"
           placeholder="Enter your password"
           {...register('password')}
-          className="text-sm sm:text-base border border-[#CCCCCC] bg-white text-black rounded-[8px] placeholder:text-[#666666] font-normal p-3 sm:p-4"
           aria-invalid={!!errors.password}
         />
         {errors.password ? (
           <InputError text={errors.password.message} />
         ) : (
-          <span className="text-[#666666] text-xs font-(family-name:--font-noto-sans)">
+          <span className="text-grayText text-xs font-noto-sans">
             Your password is between 4 and 12 characters
           </span>
         )}
@@ -67,7 +65,7 @@ export function SettingsForm() {
         type="submit"
         disabled={!isValid}
         className={`w-full md:self-end md:max-w-[272px] py-2 rounded-[4px] transition
-          ${!isValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#64C882] hover:bg-[#57b774]'}`}
+          ${!isValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-greenPrimary hover:bg-greenPrimaryHover'}`}
       >
         Save
       </Button>

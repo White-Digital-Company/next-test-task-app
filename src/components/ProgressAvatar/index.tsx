@@ -20,7 +20,7 @@ export const ProgressAvatar = ({
           cx="50%"
           cy="50%"
           r={radius}
-          stroke="#64C882"
+          stroke="var(--color-greenPrimary)"
           strokeWidth="3"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
@@ -31,7 +31,7 @@ export const ProgressAvatar = ({
       <div className="w-20 h-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <Avatar className="w-20 h-20">
           <AvatarImage src={avatarUrl} alt="User avatar" />
-          <AvatarFallback className="bg-[#C4C4C4] text-white text-lg" />
+          <AvatarFallback className="bg-grayBackground text-white text-lg" />
         </Avatar>
       </div>
     </div>
