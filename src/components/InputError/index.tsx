@@ -1,5 +1,5 @@
 interface InputErrorProps {
-  text: string;
+  text: string | undefined;
 }
 
 export function InputError({ text }: InputErrorProps) {
