@@ -5,21 +5,16 @@ import { TASK_STATUSES } from '@/constants/taskStatuses';
 import { useTasks } from '@/hooks/useTasks';
 
 export default function DashboardPage() {
-  const { data: tasks, isLoading, error } = useTasks();
+  const { data, isLoading, error } = useTasks();
 
   if (isLoading) return <div>Loading tasks...</div>;
   if (error) return <div>Error loading tasks</div>;
+  if (!data) return null;
 
-  const tasksByStatus = TASK_STATUSES.reduce(
-    (acc, { key }) => {
-      acc[key] = tasks?.filter((t) => t.status === key) || [];
-      return acc;
-    },
-    {} as Record<(typeof TASK_STATUSES)[number]['key'], typeof tasks>,
-  );
+  const { tasksByStatus } = data;
 
   const maxTasksCount = Math.max(
-    ...Object.values(tasksByStatus).map((tasks) => tasks?.length || 0),
+    ...Object.values(tasksByStatus).map((tasks) => tasks.length),
   );
 
   return (
